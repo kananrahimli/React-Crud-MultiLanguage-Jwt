@@ -37,6 +37,7 @@
     "react-icons": "^4.12.0",
     "react-paginate": "^8.2.0",
     "react-pagination-library": "^0.1.14",
+    "recharts": "^2.10.3",
     "styled-components": "^6.1.1",
     "vite": "^5.0.0"
   }

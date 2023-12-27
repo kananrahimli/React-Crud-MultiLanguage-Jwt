@@ -58,6 +58,10 @@
   "next":"Next",
   "haveYouAccount":"Do you have account?",
   "Invalid Credentials":"Password or username is not correct",
-  "update":"Update"
+  "update":"Update",
+  "pendingApplications": "Pending Applications",
+"declinedApplications": "Declined Applications",
+"interviewApplications": "Interview Applications",
+"count": "Count"
 }
 

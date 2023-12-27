@@ -19,7 +19,7 @@ $axios.interceptors.request.use(
       
       if (user) {
         config.headers['Authorization'] = `Bearer ${user.token}`;
-        // config.headers['Authorization'] = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjUxZWZhZDJjZmE3YTI5NjM1MDE3MjUiLCJpYXQiOjE3MDMwNjA1MDMsImV4cCI6MTcwMzE0NjkwM30.8Z_iR5ohuy4W8pjpCmyW8DVL_hEBJMhx6br9EP1VLRE`;
+        // config.headers['Authorization'] = `Bearer `;
 
       }
       return config;

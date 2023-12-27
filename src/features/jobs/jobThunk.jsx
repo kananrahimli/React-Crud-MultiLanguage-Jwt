@@ -6,11 +6,28 @@ export const getAllJobThnuk = (url, thunkAPI) => {
     .get(url)
     .then((res) => {
       return {
+
         data: res.data,
         headers: {
           "content-length": res.headers["content-length"],
           "content-type": res.headers["content-type"],
         },
+      };
+    })
+    .catch((err) => {
+      return checkForUnauthorizedResponse(err, thunkAPI);
+    });
+};
+export const getAllStatsThunk= (url, thunkAPI) => {
+  return $axios
+    .get(url)
+    .then((res) => {
+      return {
+        data: res.data,
+        // headers: {
+        //   "content-length": res.headers["content-length"],
+        //   "content-type": res.headers["content-type"],
+        // },
       };
     })
     .catch((err) => {

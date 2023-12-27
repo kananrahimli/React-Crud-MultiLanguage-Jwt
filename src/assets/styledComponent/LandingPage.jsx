@@ -3,7 +3,7 @@ import {styled,css} from 'styled-components'
 const Wrapper=styled.main`
     
     overflow: hidden;
-    padding: 40px 8rem;
+    padding: 40px 4rem;
     ${(props)=>css`
         background-color: var(${props.$bgColor});
         height: ${props.$height?props.$height:'100vh'};

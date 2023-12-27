@@ -1,7 +1,5 @@
 import { useTranslation } from "react-i18next"
 
-
-
 // eslint-disable-next-line react/prop-types
 const JobStatus = ({status}) => {
   const {t}=useTranslation()

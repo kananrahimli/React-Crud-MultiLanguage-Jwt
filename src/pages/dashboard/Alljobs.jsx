@@ -12,7 +12,6 @@ const Alljobs = React.memo(() => {
     <>
       <Wrapper  className="overflow">
         <JobFilter></JobFilter>
-        
       </Wrapper>
     </>
   );

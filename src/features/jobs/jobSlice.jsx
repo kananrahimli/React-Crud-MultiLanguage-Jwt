@@ -4,6 +4,7 @@ import {
   getAllJobThnuk,
   editJobThunk,
   deleteJobThunk,
+  getAllStatsThunk,
 } from "./jobThunk";
 import { toast } from "react-toastify";
 import { t } from "i18next";
@@ -16,9 +17,13 @@ const initialState = {
   allJobloading: false,
   editJob: false,
   numOfPages:null,
-  totalJobs:null
+  totalJobs:null,
+  allStats:null,
+  monthlyApplications:null
 };
-
+export const getAllStats=createAsyncThunk("job/getAllStats", async (_,thunkAPI)=>{
+  return getAllStatsThunk (`jobs/stats`,thunkAPI)
+})
 export const getAllJobs = createAsyncThunk(
   "job/getAllJobs",
   async ({ search, searchStatus, searchType, sort ,page}, thunkAPI) => {
@@ -118,7 +123,27 @@ const jobSlice = createSlice({
       .addCase(deleteJob.rejected, (state, { payload }) => {
         state.allJobloading = false;
         toast.error(payload);
-      });
+      })
+      .addCase(getAllStats.pending,(state)=>{
+        state.allJobloading = true;
+      })
+      .addCase(getAllStats.fulfilled,(state,{payload})=>{
+        const {defaultStats,monthlyApplications}=payload.data
+        state.allJobloading = false;
+        state.allStats=Object.entries(defaultStats).map(([status, count]) => ({
+          status,
+          count,
+        }))
+        state.monthlyApplications=monthlyApplications.map(item => ({
+          name: item.date,
+          date: item.date,
+          count: item.count,
+        }));
+      })
+      .addCase(getAllStats.rejected,(state,{payload})=>{
+        state.allJobloading = false;
+        toast.warning(payload)
+      })
   },
 });
 export const { allJobloading } = jobSlice.reducer;

@@ -58,5 +58,11 @@
   "next": "Sonrakı",
   "haveYouAccount": "Artıq bir hesabınız var?",
   "Invalid Credentials": "İstifadəçi adı və ya parol səhvdir.",
-  "update": "Yenilə"
+  "update": "Yenilə",
+  "pendingApplications":"Gözlənilən müraciətlər",
+  "declinedApplications":"Ləğv edilən müraciətlər",
+  "interviewApplications":"Müsahibə olunacaq müraciətlər",
+  "count":"say"
+
+
 }
