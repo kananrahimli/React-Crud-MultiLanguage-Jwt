@@ -3,12 +3,12 @@ import axios from 'axios';
 import { getUserFromLocalStorage } from './localStorage';
 
 const $axios = axios.create({
-  baseURL: 'https://jobify-prod.herokuapp.com/api/v1/toolkit', // Set your API base URL
-//   timeout: 10000, // Set timeout (optional)
+  baseURL: "https://redux-toolkit-jobster-api-server.onrender.com/api/v1", // Set your API base URL
+  //   timeout: 10000, // Set timeout (optional)
   headers: {
-  //   'Content-length': "40",
-  //   'Content-Type': 'application/json; charset=utf-8',
-  // // 'content-type': "application/json; charset=utf-8"
+    //   'Content-length': "40",
+    //   'Content-Type': 'application/json; charset=utf-8',
+    // // 'content-type': "application/json; charset=utf-8"
   },
 });
 

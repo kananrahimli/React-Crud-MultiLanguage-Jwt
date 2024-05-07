@@ -28,7 +28,7 @@ export default function App() {
       <ToastContainer position="top-center" />
       <Backdrop></Backdrop>
       <Routes>
-        <Route index element={<Navigate to="/stats"/>}></Route>
+  
         <Route path="/" element={<ProtectedRoute ><Layout></Layout></ProtectedRoute>}>
           <Route index element={<Navigate to="/stats" />} />
           <Route path="/stats" element={<Stats />} />
